@@ -2,14 +2,19 @@
   <ul class="nav-links">
     <a href="<%= root_path %>" id="logoclick" class="nav-links"><%= image_tag "logo.png", id:"logo" %>LinkBranches</a>
     <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Articles", root_path %></li>
-    <li><%= link_to "About", root_path %></li>
+    <li><%= link_to "Users", root_path %></li>
+    <% if user_signed_in? %>
+    <li><%= link_to "Profile", edit_user_registration_path %></li>
+    <% end %>
   </ul>
 </nav>
 <div class="session">
-  <a id="login" href="#">Log in</a>
-  <a id="signup" href="#"><button>SIGN UP FREE</butto\
-n></a>
+  <% if user_signed_in? %>
+  <a id="signup"><button><%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %></button></a>
+  <% else %>
+  <a id="login" href="<%= new_user_session_path %>">Log in</a>
+  <a id="signup" href="<%= new_user_registration_path %>"><button>SIGN UP FREE</button></a>
+  <% end %>
 </div>
 
 
