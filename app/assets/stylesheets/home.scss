@@ -1,3 +1,110 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body {
+  //box-sizing: border-box;
+  background-color: #fff;
+  margin: 0;
+  padding: 16px;
+  //font-size: 14px;
+}
+body p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  //font-size: 13px;
+  //line-height: 18px;
+}
+/*pre {
+  background-color: red;
+  padding: 10px;
+  font-size: 11px; }*/
+a {
+    color: #000;
+}
+/*a:visited {
+    color: blue;
+}*/
+/*body a:hover {
+  color: #fff;                                       
+  background-color: #000;
+}
+/* End body */
+
+/* Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    //justify-content: flex-start;
+    align-items: center;
+    //padding: 30px 10%;
+    font-size: 16px;
+}
+
+header li, header a, header button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    color: #263238; /* gray; || #2A2929;*/
+    text-decoration: none;
+}
+.session, .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoclick {
+    font-weight: 900;
+    color: #060100;
+}
+
+#logo {
+   width: 20px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.session, .nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.session, .nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.session a:hover, .nav-links li a:hover {
+    color: #0088a9;
+}
+
+
+button {
+    margin-left: 30px;
+    padding: 9px 25px;
+    //background-color: rgba(0,136,169,1);
+    background-color: #82E0AA; //1DBC36;
+    /*color: #060100;
+    color: #32302F;*/
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+/* End of Header section */
+
+
+
+
+/* Footer */
+footer {
+    //bottom: 0px;
+    //position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: #011530;
+    color: white;
+    /**/
+    color: blue;
+}
