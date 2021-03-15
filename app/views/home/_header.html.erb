@@ -2,9 +2,9 @@
   <ul class="nav-links">
     <a href="<%= root_path %>" id="logoclick" class="nav-links"><%= image_tag "logo.png", id:"logo" %>LinkBranches</a>
     <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Users", root_path %></li>
+    <li><%= link_to "Users", users_path %></li>
     <% if user_signed_in? %>
-    <li><%= link_to "Profile", edit_user_registration_path %></li>
+    <li><%= link_to "Profile", users_profile_path%></li>
     <% end %>
   </ul>
 </nav>
