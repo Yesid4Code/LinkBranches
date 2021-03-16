@@ -1,0 +1,37 @@
+<% if user_signed_in? and current_user.id == @user.id %>
+<h5><%= link_to "Edit info", users_edit_path %></h5>
+<% end %>
+
+<div class="card w-50">
+  <nav class="panel">
+    <div class="panel-block">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <%# = gravatar_image_tag(user.email, size: 64, alt: user.name) %>
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong><%= @user.name %></strong><br />
+              <small><%= @user.username %></small>
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="panel-block">
+      <div class="">
+        <div class="level-item has-centered-text">
+          <div>
+           <h5>Hi men</h5>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<%= link_to "Back to users", users_path %>
