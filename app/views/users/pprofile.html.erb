@@ -1,0 +1,10 @@
+<div>
+</div>
+<div>
+  <% if user_signed_in? %>
+  <h5><%= link_to "Edit info", current_user %></h5>
+  <h5><%= link_to "Edit info2", edit_user_registration_path %></h5>
+  <% else %>
+  <%= link_to "User info", users_path %>
+  <% end %>
+</div>

@@ -1,5 +1,7 @@
 <% if user_signed_in? and current_user.id == @user.id %>
-<h5><%= link_to "Edit info", users_edit_path %></h5>
+<h5><%= link_to "Edit info1", edit_user_path(@user) %></h5> <!-- get user/edit--user/edit -->
+<h5><%= link_to "Edit info2", edit_user_registration_path %></h5>
+<h5><%#= link_to "Edit info3", users_edit_path(@user) %></h5>
 <% end %>
 
 <div class="card w-50">

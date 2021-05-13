@@ -1,13 +1,42 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<h1>here??</h2>
+<%= form_with(model: user}) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :username %><br />
+    <%= f.text_area :username, autofocus: true, autocomplete: "username" %>
   </div>
 
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_area :name, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :email, autofocus: true, autocomplete: "phonee" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :email, autofocus: true, autocomplete: "country" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :email, autocomplete: "city" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio, autocomplete: "bio" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autocomplete: "email" %>
+  </div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
